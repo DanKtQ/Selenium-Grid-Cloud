@@ -7,6 +7,11 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>Selenium Grid And Cloud</name>
 
+    <properties>
+        <!-- Custom defined property "suiteXmlFile" -->
+        <suiteXmlFile>LoginTestsSauce.xml</suiteXmlFile>
+    </properties>
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
@@ -92,7 +97,7 @@
                 <version>3.5.3</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/TestSuites/AllTests.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/TestSuites/${suiteXmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
